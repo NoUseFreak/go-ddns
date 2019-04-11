@@ -1,0 +1,26 @@
+sudo: required
+language: go
+go:
+  - master
+
+env:
+  - DEP_VERSION="0.5.1"
+
+before_install:
+  - curl -L -s https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 -o $GOPATH/bin/dep
+  - chmod +x $GOPATH/bin/dep
+
+install:
+  - dep ensure
+
+deploy:
+  provider: releases
+  api_key:
+    secure: inqsh3iJmZYppfuDJqW2JZVx1H25saeWv3FLcRFceisFXIICbtQctDfkYRGJAy1QyfkK8gzx9j8gkQ7q7CdM4nrc0LtGHvKpHnkcrBkh7WRjIUGFN/m5qiBlXDbZzY9GyEZWn1b36YEVD7f1zHuuCdG9AkcLR5ldW1ecJoo4PxS4qs7dI6nIgYchmdIUHfbfN01p1Qq7zaxYF5n668puCd0cEgVubHOC6Sm5Dbs3q1A6Z49N2qj+Br1MgQPkKbFGsp0t9PvrMwflAeIU4OfqzQM1yQTKOEMQg6AfHeOjCq+25ChUL//9lg7JCrWTYjy159Mzt2vExv7224XF94u7IJJfOUOYNfkRbh/nmwV4JEgQKVrV+O4sSpXSo7x6Pc9+XWQMDWpqJnwKq6Q6A27nwioxTLMVeo5CXoiHFX4cRNWjz5c37zhqmL3iDrlBQXd/k0ZG+dcCbB/7chMCDjFzxFaxKVYlRIibC41ir7x6tXCFLaNqxu1O78j4LOOD/62en+c45epndA9C+n7FZ0050+tlW9TTpqQBqRZRj19CYAHp2ApwdM7BDauaDWa3EsBkAuMMP/kZnREfz3/Qy9WhOkgkX5doWAJ/cVJo6pZNGniOXTFvzuuhO7hbI7Nz6zuNW11KDmpt1cUh71nTI1HSq8wNeAqfvHHjj5hAOS69YwA=
+  file_glob: true
+  file: build/archive/*
+  skip_cleanup: true
+  on:
+    repo: NoUseFreak/go-ddns
+    tags: true
+    branch: master

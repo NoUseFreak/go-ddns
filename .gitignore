@@ -4,3 +4,4 @@ vendor/*
 
 .cache
 local-fixtures
+build
