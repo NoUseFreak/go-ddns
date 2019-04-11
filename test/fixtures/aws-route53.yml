@@ -1,0 +1,14 @@
+timeout: 60
+spec:
+- type: aws-route53
+  domain: vpn.example.com
+  options:
+    AWS_ACCESS_KEY_ID: xxxxxxxxxxxxxxxxxxxx
+    AWS_SECRET_ACCESS_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    zoneId: xxxxxxxxxxxxx
+- type: aws-route53
+  domain: office.example.com
+  options:
+    AWS_ACCESS_KEY_ID: xxxxxxxxxxxxxxxxxxxx
+    AWS_SECRET_ACCESS_KEY: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    zoneId: xxxxxxxxxxxxx

@@ -1,0 +1,6 @@
+# ignore vendor packages
+vendor/*
+!vendor/vendor.json
+
+.cache
+local-fixtures
