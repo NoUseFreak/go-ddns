@@ -12,11 +12,19 @@ import (
 func init() {
 	// log.SetFormatter(&log.JSONFormatter{})
 	log.SetOutput(os.Stdout)
-	log.SetLevel(log.DebugLevel)
 }
 
 func main() {
+	var logLevel string
+	flag.StringVar(&logLevel, "loglevel", "info", "Set the log level")
 	flag.Parse()
+
+	level, err := log.ParseLevel(logLevel)
+	if err != nil {
+		level = log.InfoLevel
+	}
+	log.SetLevel(level)
+
 	args := flag.Args()
 	if len(args) != 1 {
 		log.Error("Path argument required")

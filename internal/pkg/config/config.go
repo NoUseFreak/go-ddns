@@ -2,8 +2,8 @@ package config
 
 import (
 	"io/ioutil"
-	"log"
 
+	log "github.com/sirupsen/logrus"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -43,5 +43,6 @@ func (c *Config) ParseFile(file string) {
 			timeout: sets.Timeout,
 		}
 		c.sets = append(c.sets, cs)
+		log.Infof("Found config for %s", spec.Domain)
 	}
 }
