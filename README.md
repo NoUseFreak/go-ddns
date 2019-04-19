@@ -22,6 +22,10 @@ spec:
 go-ddns config.yml
 ```
 
+```
+docker run -d -v $(pwd)/config.yml:/config.yml nousefreak/go-ddns
+```
+
 ## Supported adapters
 
 Currently only `aws-route53` is supported.
