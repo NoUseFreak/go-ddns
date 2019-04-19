@@ -49,6 +49,7 @@ func (c *HandlerController) HandleSet(cs config.ConfigSet, adapter adapter.Adapt
 	if update, _ := util.NeedsUpdate(ip, domain); update == true {
 		log.Infof("Updating domain '%s'", domain)
 		adapter.SetIP(ip, &cs)
+		log.Infof("Updating domain complete '%s'", domain)
 	} else {
 		log.Debugf("Domain '%s' already at correct ip", domain)
 	}
