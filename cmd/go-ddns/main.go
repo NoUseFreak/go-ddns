@@ -4,8 +4,8 @@ import (
 	"flag"
 	"os"
 
-	"github.com/NoUseFreak/go-ddns/internal/pkg/config"
-	"github.com/NoUseFreak/go-ddns/internal/pkg/controller"
+	"github.com/nousefreak/go-ddns/internal/pkg/config"
+	"github.com/nousefreak/go-ddns/internal/pkg/controller"
 	log "github.com/sirupsen/logrus"
 )
 

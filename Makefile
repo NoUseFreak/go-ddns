@@ -37,4 +37,14 @@ package:
 	done
 	ls -lah build/archive/
 
-
+publish:
+	@if [ "${version}" == "" ]; then echo "Missing version"; exit 1; fi
+	# git tag ${version}
+	docker buildx use $(appname)-builder \
+		|| (docker buildx create --name $(appname)-builder && docker buildx use $(appname)-builder)
+	
+	docker buildx inspect --bootstrap
+	docker buildx build -t nousefreak/$(appname):$(version) \
+	 	--platform linux/amd64,linux/arm64,linux/arm --push .
+	docker buildx rm $(appname)-builder
+	echo "Published version $(version)"

@@ -1,12 +1,12 @@
 package route53
 
 import (
-	"github.com/NoUseFreak/go-ddns/internal/pkg/config"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/route53"
+	"github.com/nousefreak/go-ddns/internal/pkg/config"
 	log "github.com/sirupsen/logrus"
 )
 

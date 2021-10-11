@@ -3,8 +3,8 @@ package adapter
 import (
 	"fmt"
 
-	"github.com/NoUseFreak/go-ddns/internal/pkg/adapter/route53"
-	"github.com/NoUseFreak/go-ddns/internal/pkg/config"
+	"github.com/nousefreak/go-ddns/internal/pkg/adapter/route53"
+	"github.com/nousefreak/go-ddns/internal/pkg/config"
 )
 
 type AdapterSet struct {

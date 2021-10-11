@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/NoUseFreak/go-ddns/internal/pkg/adapter"
-	"github.com/NoUseFreak/go-ddns/internal/pkg/config"
-	"github.com/NoUseFreak/go-ddns/internal/pkg/utils/dns"
+	"github.com/nousefreak/go-ddns/internal/pkg/adapter"
+	"github.com/nousefreak/go-ddns/internal/pkg/config"
+	"github.com/nousefreak/go-ddns/internal/pkg/utils/dns"
 	log "github.com/sirupsen/logrus"
 )
 
