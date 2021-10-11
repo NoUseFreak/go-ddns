@@ -2,7 +2,7 @@ name: Semantic release
 on:
   workflow_run:
     workflows: ["Docker release"]
-    branches: [main]
+    branches: [master]
     types: [completed]
 
 jobs:
