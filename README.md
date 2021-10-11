@@ -23,7 +23,7 @@ go-ddns config.yml
 ```
 
 ```
-docker run -d -v $(pwd)/config.yml:/config.yml nousefreak/go-ddns
+docker run -d -v $(pwd)/config.yml:/config.yml ghcr.io/nousefreak/go-ddns
 ```
 
 ## Supported adapters
