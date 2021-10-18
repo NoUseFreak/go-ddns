@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/NoUseFreak/go-ddns/compare/v1.1.0...v1.2.0) (2021-10-18)
+
+
+### Features
+
+* **security:** Run as non-root by ID ([15c439f](https://github.com/NoUseFreak/go-ddns/commit/15c439fdf2810a03085127a2b51bd25d53dac8f2))
+
 # [1.1.0](https://github.com/NoUseFreak/go-ddns/compare/v1.0.0...v1.1.0) (2021-10-18)
 
 
