@@ -7,6 +7,6 @@ RUN go mod vendor \
 
 FROM gcr.io/distroless/static
 
-USER nonroot
 COPY --from=build /app/go-ddns /go-ddns
+USER 65532
 ENTRYPOINT [ "/go-ddns" ]
