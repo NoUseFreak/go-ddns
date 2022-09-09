@@ -3,7 +3,7 @@ module github.com/nousefreak/go-ddns
 go 1.19
 
 require (
-	github.com/aws/aws-sdk-go v1.44.92
+	github.com/aws/aws-sdk-go v1.44.95
 	github.com/sirupsen/logrus v1.9.0
 	gopkg.in/yaml.v2 v2.4.0
 )
